@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Brownian Music">
+  <meta name="theme-color" content="#FDF6E3">
+  <title>Brownian Music</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="title-bar">Brownian Music</div>
+
+  <div class="controls">
+
+    <div class="control-row">
+      <div class="control-group">
+        <label for="keySelect">Key</label>
+        <select id="keySelect">
+          <option>A</option>
+          <option>A#</option>
+          <option>B</option>
+          <option>C</option>
+          <option>C#</option>
+          <option>D</option>
+          <option>D#</option>
+          <option>E</option>
+          <option>F</option>
+          <option>F#</option>
+          <option>G</option>
+          <option>G#</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="scaleSelect">Scale</label>
+        <select id="scaleSelect">
+          <option value="major">Major</option>
+          <option value="minor">Minor</option>
+          <option value="chromatic">Chromatic</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="control-row">
+      <div class="control-group full-width">
+        <label>Freq</label>
+        <div class="level-buttons">
+          <button class="freq-btn" data-level="1">1</button>
+          <button class="freq-btn" data-level="2">2</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-row">
+      <div class="control-group full-width">
+        <label>Voices</label>
+        <div class="level-buttons">
+          <button class="voice-btn" data-level="1">1</button>
+          <button class="voice-btn" data-level="2">2</button>
+          <button class="voice-btn" data-level="3">3</button>
+          <button class="voice-btn" data-level="4">4</button>
+          <button class="voice-btn" data-level="5">5</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-row">
+      <div class="control-group full-width">
+        <label>Speed</label>
+        <div class="level-buttons">
+          <button class="speed-btn" data-level="1">1</button>
+          <button class="speed-btn" data-level="2">2</button>
+          <button class="speed-btn" data-level="3">3</button>
+          <button class="speed-btn" data-level="4">4</button>
+          <button class="speed-btn" data-level="5">5</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-row transport">
+      <button id="playButton">Play</button>
+      <button id="stopButton">Stop</button>
+    </div>
+
+  </div>
+
+  <script type="module" src="renderer.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+</html>

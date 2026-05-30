@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Trebuchet MS, sans-serif;
+  background-color: #FDF6E3;
+  margin: 0;
+  padding-top: 44px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background-color: #FDF6E3;
+  border-bottom: 1px solid #e0d5c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #3a2a1a;
+  z-index: 10;
+}
+
+.controls {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group.full-width {
+  flex: 1;
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #6b5040;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+select {
+  height: 44px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #c8b89a;
+  background-color: #ECDEC9;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 15px;
+  color: #3a2a1a;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.level-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.level-buttons button {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ECDEC9;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #3a2a1a;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.15s;
+}
+
+.level-buttons button.active {
+  background-color: #C8A57B;
+  color: #fff;
+}
+
+.level-buttons button:hover:not(.active) {
+  background-color: #ddd0b8;
+}
+
+.transport {
+  justify-content: center;
+  gap: 20px;
+}
+
+.transport button {
+  flex: 1;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ECDEC9;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #3a2a1a;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color 0.15s;
+}
+
+.transport button.active {
+  background-color: #C8A57B;
+  color: #fff;
+}
+
+.transport button:hover:not(.active) {
+  background-color: #ddd0b8;
+}
+
+.level-buttons .freq-btn {
+  max-width: calc((100% - 32px) / 5);
+}
+
+@media (hover: none) {
+  .level-buttons button:hover:not(.active),
+  .transport button:hover:not(.active) {
+    background-color: #ECDEC9;
+  }
+}

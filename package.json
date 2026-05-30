@@ -1,0 +1,21 @@
+{
+  "name": "brownian_music",
+  "version": "1.0.0",
+  "description": "Electron app generating Brownian-based musical tones with selectable scales and keys.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "music",
+    "brownian",
+    "synthesis",
+    "sound"
+  ],
+  "author": "BrotherDan",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^41.1.1"
+  }
+}

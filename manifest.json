@@ -1,0 +1,16 @@
+{
+  "name": "Brownian Music",
+  "short_name": "Brownian",
+  "description": "Physics-driven generative music. Invisible voices bounce and collide to produce harmonic tones.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDF6E3",
+  "theme_color": "#FDF6E3",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
